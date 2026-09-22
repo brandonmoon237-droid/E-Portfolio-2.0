@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+/* GENERAL */
+
+:root {
+  --purple: #6030b1;
+  --purple-light: #5d3eff;
+  --text-color: #242424;
+  --section-background: #f8f8f8;
+  --footer-background: #494949;
+  --white: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--text-color);
+  font-family: "Lato", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+  color: var(--text-color);
+  line-height: 1.25;
+}
+
+h1,
+h2 {
+  font-size: 35px;
+  text-align: center;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+li {
+  list-style-type: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.container {
+  padding: 80px 24px;
+}
+
+.row {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+section:nth-of-type(even) {
+  background-color: var(--section-background);
+}
+
+.section__title {
+  margin-bottom: 20px;
+}
+
+.text--purple {
+  color: var(--purple);
+}
+
+/* LINK HOVER EFFECTS */
+
+.link__hover-effect {
+  position: relative;
+}
+
+.link__hover-effect::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -4px;
+  left: 0;
+  height: 3px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 300ms ease;
+}
+
+.link__hover-effect:hover::after,
+.link__hover-effect:focus-visible::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.link__hover-effect--black::after {
+  background-color: var(--text-color);
+}
+
+.link__hover-effect--white::after {
+  background-color: var(--white);
+}
+
+/* NAVIGATION BAR */
+
+nav {
+  width: 100%;
+  max-width: 1000px;
+  min-height: 100px;
+  margin: 0 auto;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.personal__logo {
+  color: var(--purple);
+  font-size: 25px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.personal__logo--img {
+  position: relative;
+  z-index: 2;
+  width: 300px;
+  height: auto;
+}
+
+.nav__link--list {
+  display: flex;
+  align-items: center;
+}
+
+.nav__link--anchor {
+  display: inline-block;
+  margin: 0 15px;
+  color: var(--text-color);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nav__link--anchor-primary {
+  padding: 8px 20px;
+  color: var(--white);
+  background-color: var(--purple);
+  border-radius: 50px;
+  transition:
+    background-color 300ms ease,
+    transform 300ms ease;
+}
+
+.nav__link--anchor-primary:hover,
+.nav__link--anchor-primary:focus-visible {
+  background-color: var(--purple-light);
+  transform: translateY(-2px);
+}
