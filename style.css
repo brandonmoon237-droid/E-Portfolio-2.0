@@ -36,6 +36,17 @@ button {
   cursor: pointer;
 }
 
+.container {
+  padding: 50px 0;
+}
+
+.row {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
 .click {
   transition: transform 300ms ease;
 }
@@ -57,6 +68,41 @@ button {
 
 .purple {
   color: var(--color-accent);
+}
+
+/* Navigation */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  height: 100px;
+  padding: 0 24px;
+}
+
+#personal__logo--img {
+  width: 25%;
+  transform: translateY(10px);
+}
+
+.nav__link--list {
+  display: flex;
+}
+
+.nav__link {
+  margin: 0 12px;
+}
+
+.nav__link--anchor {
+  font-size: 16px;
+  color: var(--color-dark);
+  font-weight: 700;
+}
+
+.fa-circle-half-stroke {
+  font-size: 20px;
 }
 
 /* Landing page */
@@ -149,37 +195,83 @@ button {
   }
 }
 
-/* Navigation */
+/* projects */
 
-nav {
+.project__list {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.section__title {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 60px;
+}
+
+.project__img {
   width: 100%;
-  margin: 0 auto;
-  height: 100px;
-  padding: 0 24px;
+  display: block;
+  transition: transform 450ms ease, filter 450ms ease;
 }
 
-#personal__logo--img {
-  width: 25%;
-  transform: translateY(10px);
+.project__wrapper {
+  position: relative;
+  border-radius: 20px;
+  box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.45);
+  overflow: hidden;
 }
 
-.nav__link--list {
-  display: flex;
+.project__wrapper:hover .project__description {
+  opacity: 1;
+  transform: translateY(-50%);
 }
 
-.nav__link {
-  margin: 0 12px;
+.project__wrapper:hover .project__img {
+  transform: scale(1.07);
+  filter: blur(5px);
 }
 
-.nav__link--anchor {
-  font-size: 16px;
-  color: var(--color-dark);
-  font-weight: 700;
+.project__description {
+  position: absolute;
+  top: 50%;
+  left: 90px;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: opacity 300ms, transform 450ms ease;
+  color: white;
+  max-width: 550px;
 }
 
-.fa-circle-half-stroke {
+.project__wrapper:hover .project__wrapper--bg {
+  opacity: 0.7;
+}
+
+.project__wrapper--bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1c1d25;
+  opacity: 0;
+  transition: all 450ms ease;
+}
+
+.project__description--title {
+  font-size: 40px;
+}
+
+.project__description--sub-title {
+  margin: 8px;
+}
+
+.project__description--link {
+  color: white;
   font-size: 20px;
+  margin-right: 16px;
+}
+
+.project__description--para {
+  margin: 16px 0;
 }
