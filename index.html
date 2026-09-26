@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brandon Moon</title>
     <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
     <script src="https://kit.fontawesome.com/3ade8a26c6.js" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -28,13 +29,9 @@
             <a href="mailto:brandonmoon237@gmail.com" class="nav__link--anchor link__hover-effect link__hover-effect--black">Contact</a>
           </li>
           <li class="nav__link click">
-            <a
-              href="#"
-              class="nav__link--anchor link__hover-effect link__hover-effect--black"
-              aria-label="Toggle color theme"
-            >
+            <button type="button" class="theme-toggle nav__link--anchor link__hover-effect link__hover-effect--black" aria-label="Dark theme" aria-pressed="false">
               <i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i>
-            </a>
+            </button>
           </li>
         </ul>
       </nav>
@@ -80,22 +77,47 @@
         </div>
       </header>
 
-      <button class="mail__btn click" aria-label="Contact me">
+      <button type="button" class="mail__btn click" aria-label="Contact me" aria-haspopup="dialog" aria-controls="contact-modal">
         <i class="fa-solid fa-envelope" aria-hidden="true"></i>
       </button>
       <a href="#projects" class="scroll" aria-label="Scroll to projects">
         <div class="scroll__icon click" aria-hidden="true"></div>
       </a>
-      <div class="modal">
+      <dialog id="contact-modal" class="modal" aria-labelledby="contact-title">
+        <button type="button" class="modal__close" aria-label="Close contact dialog" autofocus>&times;</button>
         <div class="modal__half modal__about">
           <h3 class="modal__title modal__title--about">Here's a bit about me.</h3>
           <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer</h4>
-          <p class="modal__para"></p>
+          <p class="modal__para">
+            Hi, I'm Brandon! I'm currently <b class="purple">studying Frontend Development</b> and building my skills in HTML, CSS, JavaScript, and React. I've always enjoyed technology, problem-solving, and figuring out how things work, which is what drew me to web development.
+            <br>
+            I enjoy <b class="purple">taking ideas and turning them into clean, functional, and user-friendly websites.</b> I'm always looking for new challenges, opportunities to learn, and ways to improve my skills as I work toward starting my career as a <b class="purple">frontend developer.</b>
+          </p>
+          <div class="modal__languges">
+            <figure class="modal__languge">
+              <img class="modal__languge--img" src="./assets/html5.png" alt="HTML5">
+              <span class="language__name">HTML</span>
+            </figure>
+            <figure class="modal__languge">
+              <img class="modal__languge--img" src="./assets/css.png" alt="CSS">
+              <span class="language__name">CSS</span>
+            </figure>
+            <figure class="modal__languge">
+              <img class="modal__languge--img" src="./assets/javascript.png" alt="JavaScript">
+              <span class="language__name">JavaScript</span>
+            </figure>
+            <figure class="modal__languge">
+              <img class="modal__languge--img" src="./assets/react.png" alt="React">
+              <span class="language__name">React</span>
+            </figure>
+          </div>
         </div>
         <div class="modal__half modal__contact">
-          <h3 class="modal__title">Let's have a chat!</h3>
+          <h3 id="contact-title" class="modal__title">Let's have a chat!</h3>
+          <p>I'd love to hear from you. Send me an email to get in touch.</p>
+          <a class="modal__email" href="mailto:brandonmoon237@gmail.com">brandonmoon237@gmail.com</a>
         </div>
-      </div>
+      </dialog>
     </section>
     <section id="projects">
       <div class="container">
@@ -187,7 +209,7 @@
       <div class="container">
         <div class="row footer__row">
           <figure>
-            <img class="footer__logo--img" src="./assets/Codex Image Aug 17, 2026, 09_01_17 PM.png" alt="my logo">
+            <img class="footer__logo--img" src="./assets/Codex Image Aug 17, 2026, 09_01_17 PM.png" alt="Brandon Moon logo">
           </figure>
           <div class="footer__social--list">
             <a href="https://github.com/brandonmoon237-droid" target="_blank" rel="noopener noreferrer" class="footer__social--link link__hover-effect link__hover-effect--white">
