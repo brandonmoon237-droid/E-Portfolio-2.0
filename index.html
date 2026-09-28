@@ -43,7 +43,7 @@
             passion for building web applications with great user
             experiences.
             <br>
-            Here's a bit more <b class="purple">about me.</b>
+            Take a look at my <a href="#projects" class="purple link__hover-effect">projects below.</a>
           </p>
           <div class="social__list">
             <a
@@ -84,7 +84,9 @@
         <div class="scroll__icon click" aria-hidden="true"></div>
       </a>
       <dialog id="contact-modal" class="modal" aria-labelledby="contact-title">
-        <button type="button" class="modal__close" aria-label="Close contact dialog" autofocus>&times;</button>
+        <button type="button" class="modal__exit" aria-label="Close contact dialog" autofocus>
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
         <div class="modal__half modal__about">
           <h3 class="modal__title modal__title--about">Here's a bit about me.</h3>
           <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer</h4>
@@ -93,29 +95,49 @@
             <br>
             I enjoy <b class="purple">taking ideas and turning them into clean, functional, and user-friendly websites.</b> I'm always looking for new challenges, opportunities to learn, and ways to improve my skills as I work toward starting my career as a <b class="purple">frontend developer.</b>
           </p>
-          <div class="modal__languges">
-            <figure class="modal__languge">
-              <img class="modal__languge--img" src="./assets/html5.png" alt="HTML5">
+          <div class="modal__languages">
+            <figure class="modal__language">
+              <img class="modal__language--img" src="./assets/html5.png" alt="HTML5">
               <span class="language__name">HTML</span>
             </figure>
-            <figure class="modal__languge">
-              <img class="modal__languge--img" src="./assets/css.png" alt="CSS">
+            <figure class="modal__language">
+              <img class="modal__language--img" src="./assets/css.png" alt="CSS">
               <span class="language__name">CSS</span>
             </figure>
-            <figure class="modal__languge">
-              <img class="modal__languge--img" src="./assets/javascript.png" alt="JavaScript">
+            <figure class="modal__language">
+              <img class="modal__language--img" src="./assets/javascript.png" alt="JavaScript">
               <span class="language__name">JavaScript</span>
             </figure>
-            <figure class="modal__languge">
-              <img class="modal__languge--img" src="./assets/react.png" alt="React">
+            <figure class="modal__language">
+              <img class="modal__language--img" src="./assets/react.png" alt="React">
               <span class="language__name">React</span>
             </figure>
           </div>
         </div>
         <div class="modal__half modal__contact">
-          <h3 id="contact-title" class="modal__title">Let's have a chat!</h3>
-          <p>I'd love to hear from you. Send me an email to get in touch.</p>
-          <a class="modal__email" href="mailto:brandonmoon237@gmail.com">brandonmoon237@gmail.com</a>
+          <h3 id="contact-title" class="modal__title modal__title--contact">Let's have a chat!</h3>
+          <h4 class="modal__sub-title modal__sub-title--contact">I'm currently open to new opportunities</h4>
+          <form id="contact__form" aria-describedby="contact-help">
+            <div class="form__item">
+              <label class="form__item--label" for="contact-name">Name</label>
+              <input id="contact-name" class="input" name="user_name" type="text" autocomplete="name" required>
+            </div>
+            <div class="form__item">
+              <label class="form__item--label" for="contact-email">Email</label>
+              <input id="contact-email" class="input" name="user_email" type="email" autocomplete="email" required>
+            </div>
+            <div class="form__item">
+              <label class="form__item--label" for="contact-message">Message</label>
+              <textarea id="contact-message" class="input" name="message" rows="5" required></textarea>
+            </div>
+            <button id="contact__submit" class="form__submit">Send it my way</button>
+          </form>
+          <div class="modal__overlay modal__overlay--loading">
+            <i class="fa-solid fa-spinner"></i>
+          </div>
+          <div class="modal__overlay modal__overlay--success">
+            Thanks for the message! Looking forward to speaking to you soon.
+          </div>
         </div>
       </dialog>
     </section>
