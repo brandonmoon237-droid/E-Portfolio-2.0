@@ -690,6 +690,8 @@ footer {
 }
 
 .footer__social--list {
+  position: relative;
+  z-index: 1;
   width: 100%;
   max-width: 500px;
   display: flex;
